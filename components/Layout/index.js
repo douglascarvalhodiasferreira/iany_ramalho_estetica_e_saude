@@ -5,7 +5,7 @@ import Footer from '../Footer'
 
 export default function Layout({children}){
   return(
-    <div className='w-full'>
+    <div className='mx-auto xl:max-w-screen-2xl'>
       <Header/>
         {children}
       <Footer/>

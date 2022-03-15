@@ -1,25 +1,27 @@
 import React from 'react'
 
-export default function Icones ({titulo,imagem, subItem}){
+export default function Icones ({titulo,imagem, href, subItem}){
   return(
-    <div>
-      <p className='text-lg font-bold'>{titulo}:</p> 
-      <div className='flex flex-nowrap items-start'>
-        
-        <div className={`grid grid-flow-row-dense gap-${subItem.length+1}`}>
-          
+    <div className='mx-1'>
+      <p className= 'text-3xl md:text-4xl font-bold'>{titulo}:</p> 
+      <div className='flex flex-wrap'>
+        <div className='grow mx-1'>
           {subItem.map((res,index)=>{
-            console.log(imagem[index])
-            if(imagem[index]){
-              return <p>{res}</p>
-            }else{
-              return (imagem[index], <p>{res}</p>)
-            }
-            //if(index!==0){
-            //return <p className={'col-span-2'}>{res}</p>
-            // }else{return <p>{res}</p>}
+            return(
+              <div className={'flex flex-row space-x-1 items-start '}>
+                {imagem[index]
+                  &&<a href={href[index]}>
+                      <img src={imagem[index]} className='min-w-min h-5'/>
+                    </a>
+                }
+                <p className={`flex flex-wrap
+                 my-1 text-1xl
+                 text-gray-500
+                `}>{res}</p>
+              </div>
+            )
+           })
           }
-          )}
         </div>    
       </div>
     </div>
