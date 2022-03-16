@@ -8,7 +8,7 @@ export default function Icones ({titulo,imagem, href, subItem}){
         <div className='grow mx-1'>
           {subItem.map((res,index)=>{
             return(
-              <div className={'flex flex-row space-x-1 items-start'}>
+              <div key={res[index]} className={'flex flex-row space-x-1 items-start'}>
                 {imagem[index]
                   &&<div className={'shrink-0'}>
                       <a href={href[index]}>

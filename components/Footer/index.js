@@ -5,29 +5,29 @@ import Icones from "./icones.js"
 export default function Index(){
   const icones=[
     {titulo:'Endereço',
-     imagem:['/img/endereco.png'],
+     imagem:['/img/footer/endereco.png'],
      href:['https://icons8.com.br'],
      subItem:['AV. Prudente de Morais, 927, Bairro Santo Antonio, Belo Horizonte/MG']     
     },
     {titulo:'Contatos', 
-     imagem:['/img/tel.png','/img/cel.png','/img/email.png'],
+     imagem:['/img/footer/tel.png','/img/footer/cel.png','/img/footer/email.png'],
      href:['https://icons8.com.br','https://icons8.com.br','https://icons8.com.br'],
      subItem:['(31)3254-5555','(31)95555-5555','iany@teste.com.br']
     },
     {titulo:'Horários de Funcionamento',
-     imagem:['/img/endereco.png'],
+     imagem:['/img/footer/endereco.png'],
      href:[],
      subItem:['Segunda a Sábado de 07 às 18']
     },
     {titulo:'Endereço',
-     imagem:['/img/endereco.png'],
+     imagem:['/img/footer/endereco.png'],
      href:[],
      subItem:['AV. Prudente de Morais, 927, Bairro Santo Antonio, Belo Horizonte/MG']
     }
   ];
   return(
     <div className='w-full flex flex-col'>  
-      <div className=' text-gray-400 mx-auto' style={{backgroundImage:`url('/img/ouro.png')`}}>
+      <div className=' text-gray-400 mx-auto' style={{backgroundImage:`url('/img/footer/ouro.png')`}}>
         <div className='flex flex-wrap justify-start xl:justify-center m-10 '>
           {
             icones.map((res)=>{
