@@ -11,7 +11,7 @@ export default function Index(){
           <img src='' alt='logo'/>
         </div>
         <div>
-          <BtHeader/>
+          <BtHeader botao={{nome:'Home',href:'#'}}/>
         </div>
       </div>
     </div>

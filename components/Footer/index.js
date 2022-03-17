@@ -19,10 +19,10 @@ export default function Index(){
      href:[],
      subItem:['Segunda a Sábado de 07 às 18']
     },
-    {titulo:'Endereço',
+    {titulo:'Redes Sociais',
      imagem:['/img/footer/endereco.png'],
      href:[],
-     subItem:['AV. Prudente de Morais, 927, Bairro Santo Antonio, Belo Horizonte/MG']
+     subItem:['instagran','facebook']
     }
   ];
   return(
@@ -33,6 +33,7 @@ export default function Index(){
             icones.map((res)=>{
               return(
                 <Icones titulo={res.titulo} 
+                  key={res.titulo}
                   imagem={res.imagem}
                   href={res.href}
                   subItem={res.subItem}
