@@ -33,50 +33,43 @@ export default function BtHeader({botao}){    //{botao,primeira,segunda}
   const sobre = (e)=>{
     const name = e.target.getAttribute('name')
     const key = e.target.getAttribute('value')
-    //alert('entrou')
-    //console.log(e.target.getAttribute('value'))
-    if(name == 1){ setSegundo(true)
-    }else if (name ==2){setTerceiro(true), setValorDiv(key)
-    }else{}
-  }
-  let anterior;
-  const sai = (e)=>{
-    const nome =e.target.getAttribute('name')
-    if(anterior!=nome && nome !=null){
-      anterior = nome
-      console.log(nome)
+    if(segundo===false &&(name == 1 ||name === null)){ setSegundo(true)
+    }else if (name == 2){setTerceiro(true), setValorDiv(key)
     }
-    // const name= e.target.getAttribute('name')
-    // if(name == 2){ setTerceiro(false),setValorDiv('')
-    // }else if (name ==0){setSegundo(false)
-    // }else{}
+  }
+
+  const MudaStado = (e)=>{
+      setTerceiro(false)
+      setSegundo(false)
   }
   return(
-    <div className='max-w-min'>
-      <div onMouseOver={sobre} onMouseOut={sai} className={'text-left'}name={'1'}>
+    <div className='my-auto 'onMouseLeave={MudaStado}>
+      <div onMouseEnter={sobre}  className={''}name={'1'}>
         <a href={botao.href||'#'}>
           {botao.nome}
         </a>
-      </div>
+      
         {primeira.map((res,index)=>{
           //console.log(Object.keys(res)[0])
           return(
-            <div className='max-w-min'>
-              {segundo&&
-                (<div 
-                  key={Object.keys(res)[0]}
-                  onMouseOver={sobre} 
-                  onMouseOut={sai}
-                  className={'bg-green-400 relative'}
-                  name={'2'}
-                  value={Object.keys(res)[0]}
-                >
-
-                  <a href={res[Object.keys(res)[1]]||'#'}>
-                    {Object.keys(res)[0]}
-                  </a>
+            <div className='max-w-min flex'>
+              <div className='flex'>
+                {segundo&&
+                  (<div 
+                    key={Object.keys(res)[0]}
+                    onMouseEnter={sobre}                     
+                    className={'bg-green-400'}
+                    name={'2'}
+                    value={Object.keys(res)[0]}
+                  >
+                    <a href={res[Object.keys(res)[1]]||'#'}>
+                      {Object.keys(res)[0]}
+                    </a>
+                  </div>
+              
+                )}
                 </div>
-              )}
+                <div className='flex flex-col'>
                   {terceiro&&
                     (Object.keys(res)[0] === valorDiv&&
                       (res[Object.keys(res)[0]].map((r,index)=>{
@@ -84,8 +77,7 @@ export default function BtHeader({botao}){    //{botao,primeira,segunda}
                           <div 
                             key={r.nome}
                             onMouseEnter={sobre} 
-                            onMouseOut={sai}
-                            className={'bg-gray-400 relative'}
+                            className={'bg-gray-400'}
                             name={'3'}
                           >
                             <a href={r.href||'#'}>
@@ -96,9 +88,11 @@ export default function BtHeader({botao}){    //{botao,primeira,segunda}
                         })
                   ))
                   }
+                </div>
             </div>
           )  
         })}   
+      </div>
     </div>
   )
 }
