@@ -1,5 +1,13 @@
 import React,{useState} from 'react'
 
+<<<<<<< HEAD
+=======
+export default function BtHeader({botao}){    //{botao,primeira,segunda}
+  const [primeiro,setPrimario]= useState(true)
+  const [segundo,setSegundo]= useState(true)
+  const [terceiro,setTerceiro]= useState(true)
+  const [valorDiv,setValorDiv]=useState('Massagem esfoliante')
+>>>>>>> 9973c5715d99b714307f30f632183695af7ac58e
 
 export default function BtHeader({BtDropdownNavBar:menuNavBar}){    //{botao,primeira,segunda}
   const [primeiro,setPrimario]= useState(true)
