@@ -1,0 +1,110 @@
+import React from 'react'
+
+const BtDropdownNavBar = [
+    {'Home':[
+        {"Dermalipolise":[
+            {nome:'terceir',href:''},
+            {nome:'tercei',href:''},
+            {nome:'terce',href:''}
+            ],
+            href:''
+        },   
+        {"Ozonioterapia":[
+            {nome:'terceir',href:''},
+            {nome:'tercei',href:''},
+            {nome:'terce',href:''}
+            ],
+            href:''
+        },
+        {"Rejuvenecimento":[
+            {nome:'terceir',href:''},
+            {nome:'tercei',href:''},
+            {nome:'terce',href:''}
+            ],
+            href:''
+        },
+    ],
+    href:'2'
+    },
+    {'Promoções':[
+        {"Dermalipolise":[
+            {nome:'terceir',href:''},
+            {nome:'tercei',href:''},
+            {nome:'terce',href:''}
+            ],
+            href:''
+        },   
+        {"Ozonioterapia":[
+            {nome:'terceir',href:''},
+            {nome:'tercei',href:''},
+            {nome:'terce',href:''}
+            ],
+            href:''
+        },
+        {"Rejuvenecimento":[
+            {nome:'terceir',href:''},
+            {nome:'tercei',href:''},
+            {nome:'terce',href:''}
+            ],
+            href:''
+        },
+    ],
+    href:'#'
+    },
+    {'Produtos':[
+        {"Dermalipolise":[
+            {nome:'terceir',href:''},
+            {nome:'tercei',href:''},
+            {nome:'terce',href:''}
+            ],
+            href:''
+        },   
+        {"Ozonioterapia":[
+            {nome:'terceir',href:''},
+            {nome:'tercei',href:''},
+            {nome:'terce',href:''}
+            ],
+            href:''
+        },
+        {"Rejuvenecimento":[
+            {nome:'terceir',href:''},
+            {nome:'tercei',href:''},
+            {nome:'terce',href:''}
+            ],
+            href:''
+        },
+    ],
+    href:'#'
+    },
+    {'Duvidas':[
+        {"Dermalipolise":[
+            {nome:'terceir',href:''},
+            {nome:'tercei',href:''},
+            {nome:'terce',href:''}
+            ],
+            href:''
+        },   
+        {"Ozonioterapia":[
+            {nome:'terceir',href:''},
+            {nome:'tercei',href:''},
+            {nome:'terce',href:''}
+            ],
+            href:''
+        },
+        {"Rejuvenecimento":[
+            {nome:'terceir',href:''},
+            {nome:'tercei',href:''},
+            {nome:'terce',href:''}
+            ],
+            href:''
+        },
+    ],
+    href:'#'
+    },
+
+]
+    
+     
+
+  export {BtDropdownNavBar}
+
