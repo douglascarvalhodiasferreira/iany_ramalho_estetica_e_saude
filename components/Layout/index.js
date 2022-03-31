@@ -5,7 +5,7 @@ import Footer from '../Footer'
 
 export default function Layout({children}){
   return(
-    <div className='mx-auto'>
+    <div className='mx-auto min-w-[273px]'>
       <Header/>
         {children}
       <Footer/>

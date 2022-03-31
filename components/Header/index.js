@@ -32,25 +32,26 @@ export default function Index(){
   }, [width])
 
   return(
-    <div className='w-full min-w-[273px]'>
+    <div className='w-full static'>
       <Navbar/>
-      <div className={'inline-flex border-2 justify-around border-slate-300 w-full max-h-45'}>
+      <div className={'inline-flex border-2 justify-around items-center border-slate-300 w-full max-h-45 sticky top-0'}>
         <div className='flex grow shrink-0 h-20 w-24 pl-6 lg:h-40 lg:w-44'>
           <img src='/img/navbar/MinhaLogo.png' alt='logo' className=''/>
         </div>
-        <div className=' mr-2 flex'>
+        <div className=' mr-2 flex '>
           {Menu
-            ? <div className='inline-flex space-x-4 items-center relative'>
+            ? <div className='inline-flex space-x-4 relative max-h-20 items-center'>
                 {BtDropdownNavBar.map((menuNavBar,value)=>{
                   return(
-                    <BtHeader BtDropdownNavBar={menuNavBar}/>
+                    <BtHeader BtDropdownNavBar={menuNavBar} btNomal={'absolute'}/>
                   )})}
               </div>
-            :<div className='relative flex flex-col '>
+            :<div className='relative flex flex-col max-h-20'>
                 <img 
                   onClick={()=>setEscondeMenu((prev)=>!prev)} 
-                  src='img/navbar/menu.png' 
-                  className='w-12 h-10 pr-2 m-1 shrink-0 self-end grow-0'
+                  src={escondeMenu?'img/navbar/menu.png':'img/navbar/menu.png'} 
+                  className='w-12 h-10 pr-2 m-1 shrink-0 self-end grow-0
+                  '
                 />
                 <CSSTransition
                     in={escondeMenu}
@@ -59,10 +60,10 @@ export default function Index(){
                     // onEnter={}
                     // onExit={}
                 >
-                  <div className=''>
+                  <div className='bg-slate-100 p-2 rounded-md'>
                     {BtDropdownNavBar.map((menuNavBar,value)=>{
                       return(
-                        <BtHeader BtDropdownNavBar={menuNavBar}/>
+                        <BtHeader BtDropdownNavBar={menuNavBar} btNomal={''}/>
                       )})
                     }
                   </div>

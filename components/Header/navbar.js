@@ -4,7 +4,7 @@ export default function Index(){
   return(
     <div style={{backgroundImage:`url(/img/footer/ouro.png`}}className={'w-[100%] flex flex-between p-2'}>
       <div className={'flex flex-1'} >
-        <a href={'#'}>
+        <a href={'https://www.instagram.com/ianyneresramalhoo/'}>
           <img src='img/navbar/instagram.png' className={'w-10 h-10 shrink-0'}/>
         </a>
         <a href={'#'}>
